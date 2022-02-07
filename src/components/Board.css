@@ -1,0 +1,81 @@
+.container{
+    background-color: rgb(2, 53, 53);
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#board{
+    background-color:white;
+    background-image: url('../img/board7.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:80vmin;
+    height: 80vmin;
+    border: 1px solid black;
+    justify-content: center;
+    display: grid;
+    /* grid-template-rows: 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px; */
+    grid-template-rows: repeat(10,1fr);
+    grid-template-columns: repeat(10,1fr);
+    row-gap: 1px;
+    column-gap: 1px;
+    border: 2px solid rgb(11, 236, 67);
+}
+
+
+.blinker1{
+    cursor: pointer;
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        opacity: 0.4;
+        margin: 35% 40% 15% 10%;
+    }
+
+    50% {
+        opacity: 1;
+        margin: 32% 37% 15% 10%;
+    }
+
+    100% {
+        opacity: 0.6;
+        margin: 35% 40% 15% 10%;
+    }
+}
+
+.blinker2{
+    cursor: pointer;
+    animation: animate2 1s linear infinite;
+}
+
+@keyframes animate2 {
+    0% {
+        opacity: 0.4;
+        margin: 35% 10% 15% 40%;
+    }
+
+    50% {
+        opacity: 1;
+        margin: 32% 10% 15% 37%;
+    }
+
+    100% {
+        opacity: 0.6;
+        margin: 35% 10% 15% 40%;
+    }
+}
+@media only screen and (max-width: 800px) {
+
+    .container{
+        min-height: 70vh;
+    }
+    #board{
+        width:95vmin;
+        height: 95vmin;
+    }
+}
