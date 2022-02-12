@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import './App.css';
 import Intro from './components/Intro';
 import Board from './components/Board';
@@ -10,8 +10,23 @@ import { dummyCoins, mover} from './functions';
 
 function App() {
 
+  useEffect(() => {
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
+  
+  const handleBeforeUnload = (e) => {
+    e.preventDefault();
+    const message =
+      "Are you sure you want to leave? All progress will be lost.";
+    e.returnValue = message;
+    return message;
+  };
+
   const [N, setN] = useState(0);
-  React.useEffect(() => {
+  useEffect(() => {
     if(!N){
       let n = 0;
       while((n!=2) && (n!=3) && (n!=4))
