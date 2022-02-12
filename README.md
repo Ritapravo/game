@@ -2,4 +2,4 @@
 
 This project is built by Ritapravo Sarker
 
-![Alt text](./src/image/board7.png?raw=true "Snapshot of the game")
+![Alt text](./src/img/board7.png?raw=true "Snapshot of the game")
