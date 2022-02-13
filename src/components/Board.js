@@ -24,11 +24,13 @@ const Board = (props) => {
                         key={coin.id}
                         coin={coin}
                         position={props.positions[coin.id]}
+                        available={props.available}
                         enterEnabled={props.enterEnabled}
                         turn={coin.id===props.turn}
                         move={props.move}
                         diceVal={props.diceVal}
                         speed = {props.speed}
+
                     /> 
                 ))}       
             </div>

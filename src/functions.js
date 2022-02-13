@@ -87,8 +87,22 @@ const y_val = (z) => {
     
     v.setEnterEnabled(false);
     v.setSpaceEnabled(true);
-    v.setTurn((v.turn+1)%v.N);
+    let t=(v.turn+1)%v.N;
+    while(v.positions[t]===100 || v.available[t]===0)
+      t = (t+1)%v.N;
+    v.setTurn(t);
     v.setDiceVal("...");
+  }
+
+  const pass_turn = (v) => {
+    setTimeout(() => {
+      let t=(v.turn+1)%v.N;
+      while(v.positions[t]===100 || v.available[t]===0)
+        t = (t+1)%v.N;
+      v.setTurn(t);
+      v.setDiceVal("...");
+      v.setSpaceEnabled(true);
+    }, v.speed*4);
   }
 
 
@@ -116,4 +130,4 @@ const check = (z) =>{
 }
 
 
-export  {x_val,y_val, mover, dummyCoins};
+export  {x_val,y_val, mover, dummyCoins, pass_turn};

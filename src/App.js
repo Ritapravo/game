@@ -3,9 +3,7 @@ import './App.css';
 import Intro from './components/Intro';
 import Board from './components/Board';
 import Button from './components/Button';
-import { dummyCoins, mover} from './functions';
-
-
+import { dummyCoins, mover, pass_turn} from './functions';
 
 
 function App() {
@@ -31,6 +29,7 @@ function App() {
       let n = 0;
       while(n<2 || n>4)
         n = prompt("Enter the number of players from 2 to 4", "2");
+        // n = 4;
       setN(n);
     }
   }, [N]);
@@ -42,6 +41,7 @@ function App() {
   const [spaceEnabled, setSpaceEnabled] = useState(true);
   const [enterEnabled, setEnterEnabled] = useState(false);
   const [positions, setPositions] = useState([1,1,1,1]);
+  const [available, setAvailable] = useState([1,1,1,1]);
 
   let variables = {
     turn: turn,
@@ -56,12 +56,17 @@ function App() {
     N:N,
     positions: positions,
     setPositions: setPositions,
+    available: available,
+    setAvailable: setAvailable,
   }
   
   const rollDice = ()=>{
-    setDiceVal(Math.round(1+(5)*Math.random()));
-    // setDiceVal(2);
-    setEnterEnabled(true);
+    let dice_value_temp = Math.round(1+(5)*Math.random());
+    setDiceVal(dice_value_temp);
+    if(positions[turn]+dice_value_temp<=100)
+      setEnterEnabled(true);
+    else
+      pass_turn(variables);  
   }
 
   const move = (setCounter, id) => {
@@ -87,6 +92,7 @@ function App() {
         coins={dummyCoins}
         N = {N}
         positions={positions}
+        available={available}
       />
       <Button turn={turn} diceVal={diceVal} onClickRollDice={Clicked}/>
     </div>

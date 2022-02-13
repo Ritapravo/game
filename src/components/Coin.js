@@ -48,6 +48,10 @@ const Coin = (props) => {
         gridColumnStart: y_val(counter),
         // transition: "all 2s ease-in"
     };
+    if(props.available[props.coin.id]===0){
+        Coin_marker.backgroundColor="grey";
+        Coin_marker.opacity="80%";
+    }
 
 
     return (
