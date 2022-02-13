@@ -3,19 +3,17 @@ import './Intro.css'
 
 const Intro = (props) =>{
     
-    // console.log(props.turn);
-    
     const colors =['Green', 'Red', 'Blue', 'Yellow'];
-    // console.log(props.turn);
+    
     return (
     <div className="intro">
-        <h3>
+        <h3 className={colors[props.turn]}>
             TURN:{' '}
-            <span id="turn">{colors[props.turn]}</span> 
+            <span>{colors[props.turn]}</span> 
             DICE-VALUE:{' '}
-            <span id="dice_val">{props.diceVal}</span>
+            <span>{props.diceVal}</span>
         </h3>
-        <h3><span id="roller">Welcome to Snakes and Ladders !</span></h3>
+        <h3 className={colors[props.turn]}>Welcome to Snakes and Ladders !</h3>
     </div>
     )
 }
