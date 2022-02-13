@@ -40,8 +40,8 @@ function App() {
   const [diceVal, setDiceVal] = useState("...");
   const [spaceEnabled, setSpaceEnabled] = useState(true);
   const [enterEnabled, setEnterEnabled] = useState(false);
-  const [positions, setPositions] = useState([1,1,1,1]);
-  const [available, setAvailable] = useState([1,1,1,1]);
+  const [positions, setPositions] = useState([1,98,25,100]);
+  const [available, setAvailable] = useState([1,1,0,1]);
 
   let variables = {
     turn: turn,
