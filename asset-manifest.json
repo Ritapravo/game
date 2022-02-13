@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/game/static/css/main.430d7407.css",
+    "main.js": "/game/static/js/main.dd5de353.js",
+    "static/js/787.8ac135ba.chunk.js": "/game/static/js/787.8ac135ba.chunk.js",
+    "static/media/board7.png": "/game/static/media/board7.5ba102e6b63843229de2.png",
+    "index.html": "/game/index.html",
+    "main.430d7407.css.map": "/game/static/css/main.430d7407.css.map",
+    "main.dd5de353.js.map": "/game/static/js/main.dd5de353.js.map",
+    "787.8ac135ba.chunk.js.map": "/game/static/js/787.8ac135ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.430d7407.css",
+    "static/js/main.dd5de353.js"
+  ]
+}
