@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/game/static/css/main.430d7407.css",
-    "main.js": "/game/static/js/main.dd5de353.js",
-    "static/js/787.8ac135ba.chunk.js": "/game/static/js/787.8ac135ba.chunk.js",
-    "static/media/board7.png": "/game/static/media/board7.5ba102e6b63843229de2.png",
-    "index.html": "/game/index.html",
-    "main.430d7407.css.map": "/game/static/css/main.430d7407.css.map",
-    "main.dd5de353.js.map": "/game/static/js/main.dd5de353.js.map",
-    "787.8ac135ba.chunk.js.map": "/game/static/js/787.8ac135ba.chunk.js.map"
+    "main.css": "/static/css/main.f07d22a9.css",
+    "main.js": "/static/js/main.4a5f76a8.js",
+    "static/js/787.ca846adf.chunk.js": "/static/js/787.ca846adf.chunk.js",
+    "static/media/board7.png": "/static/media/board7.5ba102e6b63843229de2.png",
+    "index.html": "/index.html",
+    "main.f07d22a9.css.map": "/static/css/main.f07d22a9.css.map",
+    "main.4a5f76a8.js.map": "/static/js/main.4a5f76a8.js.map",
+    "787.ca846adf.chunk.js.map": "/static/js/787.ca846adf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.430d7407.css",
-    "static/js/main.dd5de353.js"
+    "static/css/main.f07d22a9.css",
+    "static/js/main.4a5f76a8.js"
   ]
 }

@@ -1,3 +1,5 @@
+
+
 const dummyCoins = [
   {
     id: 3,

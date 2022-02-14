@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React from "react";
 import './Board.css'
 import Coin from "./Coin";
 
