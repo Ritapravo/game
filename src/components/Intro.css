@@ -1,0 +1,37 @@
+.intro{
+    /* margin:4px ; */
+    text-align: center;
+}
+h3,h1{
+    color:honeydew;
+    text-shadow:
+    -0.5px -0.5px 0 rgb(150, 126, 126),
+    0.5px -0.5px 0 rgb(5, 1, 1),
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+span{
+    margin-right: 15px;
+}
+
+#roller{
+    cursor: pointer;
+}
+#roller:hover{
+    color: aqua;
+}
+
+.Green{
+    color: #36d463;
+}
+
+.Red {
+    color: rgb(241, 34, 34);
+}
+
+.Blue{
+  color: rgb(34, 158, 241);
+}
+.Yellow{
+  color: hsl(60, 63%, 53%);
+}
