@@ -40,7 +40,7 @@ function App() {
   const [diceVal, setDiceVal] = useState("...");
   const [spaceEnabled, setSpaceEnabled] = useState(true);
   const [enterEnabled, setEnterEnabled] = useState(false);
-  const [positions, setPositions] = useState([1,10,91,100]);
+  const [positions, setPositions] = useState([1,1,1,1]);
   const [available, setAvailable] = useState([1,1,1,1]);
 
   let variables = {
@@ -62,11 +62,12 @@ function App() {
   
   const rollDice = ()=>{
     let dice_value_temp = Math.round(1+(5)*Math.random());
+    // dice_value_temp=6;
     setDiceVal(dice_value_temp);
     if(positions[turn]+dice_value_temp<=100)
       setEnterEnabled(true);
     else
-      pass_turn(variables);  
+      pass_turn(variables, dice_value_temp);  
   }
 
   const move = (setCounter, id) => {

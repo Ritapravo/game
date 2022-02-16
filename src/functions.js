@@ -88,19 +88,26 @@ const y_val = (z) => {
     v.setEnterEnabled(false);
     v.setSpaceEnabled(true);
     let t=(v.turn+1)%v.N;
-    while(v.positions[t]===100 || v.available[t]===0)
+    let k = 0;
+    while((v.positions[t]===100 || v.available[t]===0) && ++k<=5)
       t = (t+1)%v.N;
-    if(v.diceVal===6)
+    if(k===6) alert("Game Over! Refresh to start a new game.");
+    if(v.diceVal===6 && z!==100)
       t=v.turn;
     v.setTurn(t);
     v.setDiceVal("...");
   }
 
-  const pass_turn = (v) => {
+  const pass_turn = (v, dice_value_temp) => {
     setTimeout(() => {
       let t=(v.turn+1)%v.N;
-      while(v.positions[t]===100 || v.available[t]===0)
+      let k = 0;
+      while((v.positions[t]===100 || v.available[t]===0)&& ++k<=5)
         t = (t+1)%v.N;
+        if(k===6) alert("Game Over! Refresh to start a new game.");
+      // console.log(dice_value_temp, v.turn);
+      if(dice_value_temp===6)
+        t = v.turn;
       v.setTurn(t);
       v.setDiceVal("...");
       v.setSpaceEnabled(true);
