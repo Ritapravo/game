@@ -23,6 +23,7 @@
     row-gap: 1px;
     column-gap: 1px;
     border: 2px solid rgb(11, 236, 67);
+    
 }
 
 .circle{
@@ -30,10 +31,50 @@
     width: 60%;
     height: 60%;
     border-radius: 50%;
+    text-align: center;
     margin: 15%;
     border: 1px solid black;
+    transform: rotate(-45deg);
+    background-image: url('../img/me2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-
+.iconText{
+    display: none;
+    color: rgb(255, 255, 255);
+    /* transform: rotate(-45deg); */
+    text-align: center;
+    text-shadow:
+    -0.5px -0.5px 0 rgb(0, 0, 0),
+    0.5px -0.5px 0 rgb(5, 1, 1),
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+.magnify{
+    width: 350%;
+    height: 350%;
+    position: absolute;
+    top: -250%;
+    left: -250%;
+    border-radius: 20%;
+    transition: all 1s ease-in-out;
+}
+.textMagnify{
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    position:absolute;
+    background: transparent;
+    top: 70%;
+    /* left: -000%; */
+    transition: all 1s ease-in-out;
+}
+h4{
+    background: transparent;
+    /* font-size: 100%; */
+    text-align: center;
+}
 
 
 .blinker{
@@ -67,5 +108,26 @@
     #board{
         width:95vmin;
         height: 95vmin;
+    }
+    .textMagnify{
+        width: 100%;
+        /* height: 600%; */
+        display: block;
+        position:absolute;
+        text-align: center;
+        background: transparent;
+        top: 70%;
+        left: 0%;
+        transition: all 1s ease-in-out;
+    }
+    .magnify{
+        width: 600%;
+        height: 600%;
+        position: absolute;
+        top: -400%;
+        left: -400%;
+        border-radius: 25%;
+        transition: all 1s ease-in-out;
+        /* transition: width 2s, height 2s, transform 2s; */
     }
 }

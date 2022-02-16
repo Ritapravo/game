@@ -90,6 +90,8 @@ const y_val = (z) => {
     let t=(v.turn+1)%v.N;
     while(v.positions[t]===100 || v.available[t]===0)
       t = (t+1)%v.N;
+    if(v.diceVal===6)
+      t=v.turn;
     v.setTurn(t);
     v.setDiceVal("...");
   }

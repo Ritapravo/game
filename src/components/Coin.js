@@ -48,20 +48,42 @@ const Coin = (props) => {
         gridColumnStart: y_val(counter),
         // transition: "all 2s ease-in"
     };
+    
     if(props.available[props.coin.id]===0){
         Coin_marker.backgroundColor="grey";
         Coin_marker.opacity="80%";
     }
-
-
+    const [iconClicked, setIconClicked] = useState(0);
+    
+    const iconClick = () =>{
+        if(!iconClicked){
+            if(!props.turn){
+                setIconClicked(1);
+                setTimeout(() => {
+                    setIconClicked(0);
+                }, speed*11);
+            } 
+        }
+        else
+            setIconClicked(0); 
+        // console.log(iconClicked);
+    }
+    
     return (
+        
         <div
             style={Coin_marker}
             className={props.turn && props.enterEnabled ? "blinker" : ""}
             onClick={slide}
         >
-            <div className="circle"/>
+            <div className={"circle "+((!iconClicked)?"":"magnify")}  onClick={iconClick}>
+                <div  className={"iconText "+((!iconClicked)?"":"textMagnify")}>
+                    <h4 style={{color:props.coin.backgroundColor}}>ManuGanu</h4>
+                </div>
+            </div>
         </div>
+        
+       
     );
 }
 export default Coin;
